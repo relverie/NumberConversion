@@ -32,3 +32,12 @@ return error
 //convert binary into hexadecimal
 //convert hexadecimal into binary
 //add two binary numbers, provide results in binary and denary. (notify user if 8 bit overflow)
+
+// Your JavaScript goes here!
+    //sessionStorage.setItem(key,value) sets a value to be stored at key as a variable
+    //document.getElementById() gets the value of textbox
+    //document.getElementById("results").innerHTML = output; outputs variable output to html results
+    console.log("Hello, World!")
+    function getstr()
+      str = document.getElementById("textbox")
+    return str
