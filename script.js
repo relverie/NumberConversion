@@ -41,3 +41,5 @@ return error
     function getstr()
       str = document.getElementById("textbox")
     return str
+    function getsubmit()
+      submitted? = document.getElementById("submit")
