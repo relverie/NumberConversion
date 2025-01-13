@@ -11,11 +11,18 @@
       Hello! This website is a school project used to convert numbers and do basic binary conversions.
   </p>
 <input type="checkbox" id="test1" name="test1" value="test1">
+<input type="button" id="button" name="submit" value="submit"> 
 <label for="test1"> This is a test</label><br>
 
   <script>
     // Your JavaScript goes here!
+    //sessionStorage.setItem(key,value) sets a value to be stored at key as a variable
+    //document.getElementById() gets the value of textbox
+    //document.getElementById("results").innerHTML = output; outputs variable output to html results
     console.log("Hello, World!")
+    function getstr()
+      str = document.getElementById("textbox")
+    return str
   </script>
 </body>
 </html>
