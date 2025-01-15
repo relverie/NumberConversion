@@ -18,6 +18,10 @@ return error
 */
 
 //verify denary (must be int, must be in range 0-255)
+function verifyDenary(){
+
+}
+
 //verify hexadecimal (must only contain 2 characters, must only contain 0-9/A-F)
 //verify binary (must be int, must only contain 0s/1s, must only contain 8 characters)
 
@@ -37,9 +41,13 @@ return error
     //sessionStorage.setItem(key,value) sets a value to be stored at key as a variable
     //document.getElementById() gets the value of textbox
     //document.getElementById("results").innerHTML = output; outputs variable output to html results
-    console.log("Hello, World!")
-    function getstr()
-      str = document.getElementById("textbox")
-    return str
-    function getsubmit()
-      submitted? = document.getElementById("submit")
+    console.log("test")
+    function getNumber() {
+        let str = document.getElementById("textbox")
+
+        return str
+    }
+
+    function getSubmit() {
+        let submitted = document.getElementById("submit")
+    }
