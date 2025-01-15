@@ -22,9 +22,14 @@ function verifyDenary(){
 
 }
 
-//verify hexadecimal (must only contain 2 characters, must only contain 0-9/A-F)
-//verify binary (must be int, must only contain 0s/1s, must only contain 8 characters)
+//verify hexadecimal (must be string, must only contain 2 characters, must only contain 0-9/A-F)
+function verifyHexadecimal(){
 
+}
+//verify binary (must be int, must only contain 0s/1s, must only contain 8 characters)
+function verifyBinary(){
+
+}
 //convert denary into binary
 //convert denary into hexadecimal
 //add two denary numbers
@@ -44,7 +49,6 @@ function verifyDenary(){
     console.log("test")
     function getNumber() {
         let str = document.getElementById("textbox")
-
         return str
     }
 
