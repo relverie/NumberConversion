@@ -4,25 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
-  <title>Title</title>
+  <title>Number Conversion Project</title>
 </head>
 <body>
   <p>
       Hello! This website is a school project used to convert numbers and do basic binary conversions.
   </p>
-
-  <div>
+  <div id="input">
       <label for="inputdefault">Enter a denary, binary or hexadecimal number: </label>
       <input type="text" id="inputdefault" required size=""><br>
       <label for="binarynumber">Enter a denary, binary or hexadecimal number: </label>
       <input type="text" id="binarynumber" required size=""><br>
   </div>
   <input type="button" id="button" name="submit" value="submit">
-  <div>
+  <div id="output">
       <p>Your Number is: <span id="ResultIdentifier"></span></p>
-      <p><span id="ResultDen"></span></p>
-      <p><span id="ResultBin"></span></p>
-      <p><span id="ResultHex"></span></p>
+      <p>Conversion Result to Denary: <span id="ResultDen"></span></p>
+      <p>Conversion Result to Binary: <span id="ResultBin"></span></p>
+      <p>Conversion Result to Hexadecimal: <span id="ResultHex"></span></p>
+      <p>Addition Result of the two entered numbers: <span id="ResultAddition"></span></p>
   </div>
   <script src="js/script.js"></script>
 </body>
