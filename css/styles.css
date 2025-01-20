@@ -1,10 +1,12 @@
 body {
     font-family: Verdana, sans-serif;
     color: #cad3f5;
+    background-colour: #24273a;
 }
 
 head {
     border-radius: 25px;
+    text-align: center;
     padding: 20px 20px 20px 80px;
     margin: 5px;
     background-colour: #24273a;
@@ -13,10 +15,16 @@ output, input {
     border-radius: 5px;
     padding: 20px;
     margin: 5px;
+    background-colour: #24273a;
+}
+
+output {
+    background-color: #24273a;
+
 }
 
 footer {
-    padding: 10px 20px 20px 80px;
+    padding: 20px 80px 20px 0;
 }
 /*flexbox*/
 .flex-container {
