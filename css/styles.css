@@ -1,7 +1,7 @@
 body {
     font-family: Verdana, sans-serif;
     color: #cad3f5;
-    background-colour: #24273a;
+    background-color: #24273a;
 }
 
 head {
@@ -9,25 +9,39 @@ head {
     text-align: center;
     padding: 20px 20px 20px 80px;
     margin: 5px;
-    background-colour: #24273a;
 }
 output, input {
     border-radius: 5px;
-    padding: 20px;
     margin: 5px;
-    background-colour: #24273a;
+    padding: 10px 20px;
 }
 
 output {
-    background-color: #24273a;
-
+    border-radius: 5px;
 }
 
 footer {
-    padding: 20px 80px 20px 0;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #6c7086;
+    font-size: 12px;
+    width: 180px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+header {
+    border-radius: 5px;
+    text-align: center;
+    background-color: #6c7086;
+    font-size: 12px;
+    width: 180px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 /*flexbox*/
 .flex-container {
+    padding: 20px 30px 20px 0;
     display: flex;
     flex-direction: row;
 }
