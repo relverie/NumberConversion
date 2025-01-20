@@ -1,7 +1,30 @@
-* {
-  color: #F0F0F0;
-  background-color: #060606;
+body {
+  font-family: Verdana, sans-serif;
+  background-colour: #24273a;
+  color: #cad3f5;
 }
-div {  /*top, right, bottom, left*/
-  padding: 20px 0 20px 70px;
+head {
+  border-radius: 25px;
+  padding: 20px 20px 20px 80px;
+  margin: 5px;
+}
+output, input {
+  border-radius: 5px;
+  padding: 20px;
+  margin: 5px;
+}
+
+footer {
+  padding: 10px 20px 20px 80px;
+}
+/*flexbox*/
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+/*changes flexbox to column/row depending on screen width*/
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
 }
