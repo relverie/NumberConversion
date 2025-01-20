@@ -2,3 +2,6 @@
   color: #F0F0F0;
   background-color: #060606;
 }
+div {  /*top, right, bottom, left*/
+  padding: 20px 0 20px 70px;
+}
