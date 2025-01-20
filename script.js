@@ -35,7 +35,7 @@ function verifyHexadecimal(){
 function verifyBinary(){
 
 }
-//convert denary into binary :3
+//convert denary into binary
 function Den2binary(input){
     let number = parseInt(input);
     let binaryResult =  []
@@ -46,12 +46,9 @@ function Den2binary(input){
     let output = binaryResult.join();
 }
 //convert denary into hexadecimal
-function den2Hexadecimal(input)
-
-}
-//add two denary numbers :3
-function add(input1, input2){
-    return input1 + input2;
+function den2Hexadecimal(input){
+    let binary = den2binary(input);
+    let hexadecimal = bin2Hexadecimal(binary);
 }
 //convert binary into denary
 function Bin2denary(input){
@@ -82,13 +79,15 @@ function Hex2binary(input){
     let pt2 = map.get(input.slice(2,2));
     return pt1.toString() + p2.toString();
 }
+//add two denary numbers
+function add(input1, input2){
+    return input1 + input2;
+}
 
 //These three can be made by utilizing previous code
 //convert binary into hexadecimal
 //convert hexadecimal into binary
 //add two binary numbers, provide results in binary and denary. (notify user if 8 bit overflow)
-
-// Your JavaScript goes here!
     //sessionStorage.setItem(key,value) sets a value to be stored at key as a variable
     //document.getElementById() gets the value of textbox
     //document.getElementById("results").innerHTML = output; outputs variable output to html results
