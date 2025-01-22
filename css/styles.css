@@ -19,25 +19,20 @@ output, input {
 output {
     border-radius: 5px;
 }
-
 footer {
     border-radius: 5px;
     text-align: center;
-    background-color: #6c7086;
+    background-color: #179299;
     font-size: 12px;
     width: 180px;
     padding-top: 10px;
     padding-bottom: 10px;
 }
+div.background {
 
-header {
-    border-radius: 5px;
-    text-align: center;
-    background-color: #6c7086;
-    font-size: 12px;
-    width: 180px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+}
+div.transbox {
+
 }
 /*flexbox*/
 .flex-container {

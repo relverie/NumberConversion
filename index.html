@@ -1,39 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head id="header">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/styles.css">
-  <title>Number Conversion Project</title>
-    <p>
-        Hello! This website is a school project used to convert numbers and do basic conversions.
-    </p>
-</head>
-<body>
-  <div class="flex-container">
-    <div id="input" style="order: 1;flex-grow: 1">
-        <h2>Inputs: </h2>
-        <label for="inputDefault">Enter a denary, binary or hexadecimal number: </label>
-        <input type="text" id="inputDefault" style="background-color:#bac2de;font-size: 20px" required maxlength="8"><br>
-        <label for="secondNumber">Enter a denary, binary or hexadecimal number: </label>
-        <input type="text" id="secondNumber" style="background-color:#bac2de;font-size: 20px" required maxlength="8"><br>
+    <head id="header">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/styles.css">
+        <title>Number Conversion Project</title>
+        <p style="height: 20px;border-bottom: 5px solid #cad3f5">
+            Hello! This webapp is a school project used to convert numbers and do basic conversions.
+        </p>
+    </head>
+    <body>
+    <div class="flex-container">
+        <div id="input" style="order: 1;flex-grow: 1">
+            <h2>Inputs: </h2>
+            <label for="inputDefault">Enter a denary, binary or hexadecimal number: </label>
+            <input type="text" id="inputDefault" style="resize: none;background-color:#bac2de;font-size: 20px" required maxlength="8"><br>
+            <label for="secondNumber">Enter a denary, binary or hexadecimal number: </label>
+            <input type="text" id="secondNumber" style="resize: none;background-color:#bac2de;font-size: 20px" required maxlength="8"><br>
 
-        <input type="button" id="button" style="background-color:#bac2de;font-size: 20px" name="submit" value="Submit Number">
+            <input type="button" id="button" style="background-color:#bac2de;font-size: 20px" name="submit" value="Submit Number">
+        </div>
+        <div id="output" style="order: 2;flex-grow: 1">
+            <h2>Outputs: </h2><br>
+            Your Number is a: <span id="ResultIdentifier"></span><br>
+            Conversion Result to Denary: <span id="ResultDen"></span><br>
+            Conversion Result to Binary: <span id="ResultBin"></span><br>
+            Conversion Result to Hexadecimal: <span id="ResultHex"></span><br>
+            Denary Result of the two entered numbers: <span id="DenAddition"></span><br>
+            Binary Result of the two entered numbers: <span id="BinAddition"></span><br>
+            Hexadecimal Result of the two entered numbers: <span id="HexAddition"></span>
+        </div>
     </div>
-    <div id="output" style="order: 2;flex-grow: 1">
-      <h2>Outputs: </h2><br>
-        Your Number is a: <span id="ResultIdentifier"></span><br>
-        Conversion Result to Denary: <span id="ResultDen"></span><br>
-        Conversion Result to Binary: <span id="ResultBin"></span><br>
-        Conversion Result to Hexadecimal: <span id="ResultHex"></span><br>
-        Denary Result of the two entered numbers: <span id="DenAddition"></span><br>
-        Binary Result of the two entered numbers: <span id="BinAddition"></span><br>
-        Hexadecimal Result of the two entered numbers: <span id="HexAddition"></span>
+    <script src="script.js"></script>
+    </body>
+    <div id="foot">
+        <div id="footer">
+            <footer><small>made with love by rel<3</small></footer>
+        </div>
     </div>
-  </div>
-  <script src="script.js"></script>
-</body>
-<div id="footer">
-    <footer><small>made with love by rel<3</small></footer>
-</div>
 </html>
