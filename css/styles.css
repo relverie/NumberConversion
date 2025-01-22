@@ -1,7 +1,14 @@
 body {
     font-family: Verdana, sans-serif;
     color: #cad3f5;
+    background-color: #181926;
+}
+
+main {
+    width: 80%;
     background-color: #24273a;
+    margin: auto;
+    border: 10px solid #24273a;
 }
 
 head {
@@ -15,28 +22,50 @@ output, input {
     margin: 5px;
     padding: 10px 20px;
 }
-
-output {
-    border-radius: 5px;
+table, th, td {
+    border: 3px solid #24273a;
+    border-collapse: collapse;
+}
+th, td {
+    background-color: #51576d;
+    padding-right: 15px;
+    text-align: left;
+}
+td {
+    padding-right: 80px !important;
 }
 footer {
     border-radius: 5px;
     text-align: center;
-    background-color: #179299;
+    background-color: #51576d;
     font-size: 12px;
     width: 180px;
     padding-top: 10px;
     padding-bottom: 10px;
+    margin: 10px;
 }
-div.background {
 
-}
-div.transbox {
-
+.wrapper{
 }
 /*flexbox*/
 .flex-container {
     padding: 20px 30px 20px 0;
     display: flex;
     flex-direction: row;
+}
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+    }
+    main {
+        width: 100%;
+    }
+}
+@media (max-width: 320px) {
+    .flex-container {
+        flex-direction: column;
+    }
+    main {
+        width: 100%;
+    }
 }

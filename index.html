@@ -4,38 +4,67 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/styles.css">
+        <script src="script.js"></script>
         <title>Number Conversion Project</title>
-        <p style="height: 20px;border-bottom: 5px solid #cad3f5">
-            Hello! This webapp is a school project used to convert numbers and do basic conversions.
-        </p>
     </head>
-    <body>
-    <div class="flex-container">
-        <div id="input" style="order: 1;flex-grow: 1">
-            <h2>Inputs: </h2>
-            <label for="inputDefault">Enter a denary, binary or hexadecimal number: </label>
-            <input type="text" id="inputDefault" style="resize: none;background-color:#bac2de;font-size: 20px" required maxlength="8"><br>
-            <label for="secondNumber">Enter a denary, binary or hexadecimal number: </label>
-            <input type="text" id="secondNumber" style="resize: none;background-color:#bac2de;font-size: 20px" required maxlength="8"><br>
+<body>
+    <main>
+        <div style="height: 60px;border-bottom: 5px solid #cad3f5">
+            <p>
+                Hello! This web app is a school project used to convert numbers,
+                as well as doing basic addition in different formats.
+            </p>
+        </div>
+        <div id="main" class="flex-container" style ="border-bottom: 5px solid #cad3f5">
+                <div id="input" style="order: 1;flex-grow: 1">
+                    <h2>Inputs: </h2>
+                    <label for="inputDefault">Enter a denary, binary or hexadecimal number: </label>
+                    <input type="text" id="inputDefault" style="resize: none;background-color:#bac2de;font-size: 20px" required maxlength="8"><br>
 
-            <input type="button" id="button" style="background-color:#bac2de;font-size: 20px" name="submit" value="Submit Number">
-        </div>
-        <div id="output" style="order: 2;flex-grow: 1">
-            <h2>Outputs: </h2><br>
-            Your Number is a: <span id="ResultIdentifier"></span><br>
-            Conversion Result to Denary: <span id="ResultDen"></span><br>
-            Conversion Result to Binary: <span id="ResultBin"></span><br>
-            Conversion Result to Hexadecimal: <span id="ResultHex"></span><br>
-            Denary Result of the two entered numbers: <span id="DenAddition"></span><br>
-            Binary Result of the two entered numbers: <span id="BinAddition"></span><br>
-            Hexadecimal Result of the two entered numbers: <span id="HexAddition"></span>
-        </div>
-    </div>
-    <script src="script.js"></script>
-    </body>
-    <div id="foot">
-        <div id="footer">
-            <footer><small>made with love by rel<3</small></footer>
-        </div>
-    </div>
+                    <label for="secondNumber">Enter a second denary, binary or hexadecimal number: </label>
+                    <input type="text" id="secondNumber" style="resize: none;background-color:#bac2de;font-size: 20px; margin-top: 10px" required maxlength="8"><br>
+
+                    <input type="button" id="button" style="background-color:#bac2de;font-size: 20px; margin-top: 40px" name="submit" value="Submit Number">
+                </div>
+                <div id="output" style="order: 2;flex-grow: 1">
+                    <h2>Outputs: </h2><br>
+                    <table>
+                        <tr>
+                            <td>Your first number is in the format of: </td>
+                            <td><span id="ResultIdentifier"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Conversion Result to denary: </td>
+                            <td><span id="ResultDen"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Conversion Result to binary: </td>
+                            <td><span id="ResultBin"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Conversion Result to hexadecimal: </td>
+                            <td><span id="ResultHex"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Addition result of the two entered numbers in denary: </td>
+                            <td><span id="DenAddition"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Addition result of the two entered numbers in binary: </td>
+                            <td><span id="BinAddition"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Addition result of the two entered numbers in hexadecimal: </td>
+                            <td><span id="HexAddition"></span></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="foot">
+                <div id="footer">
+                    <footer><small>made with <a href="https://catppuccin.com/" style="color: #babbf1">Catppuchin</a> by <a href="https://github.com/relverie" style="color: #babbf1">relverie</a> &lt;3 </small></footer>
+                </div>
+            </div>
+    </main>
+</body>
 </html>
