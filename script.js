@@ -19,25 +19,49 @@ return error
 //get the input!!!!!
 function parseInt(str){
     let num;
-    num = document.getElementById("input");
+    num = document.getElementById(str);
     return num;
 }
 //verify denary (must be int, must be in range 0-255)
-function verifyDenary(){
-
+function verifyDenary(input){
+    let number = input
+    const denTest = /([0123456789])/;
+    switch (number) {
+        case denTest:
+            return number < 256 && number > -1;
+        default:
+            return false;
+    }
 }
 
 //verify hexadecimal (must be string, must only contain 2 characters, must only contain 0-9/A-F)
-function verifyHexadecimal(){
+function verifyHexadecimal(input){
+    let number = input
+    const hexTest = /([0123456789ABCDEF]{2})/;
+    switch (number) {
+        case hexTest:
+            return true
+        default:
+            return false;
+    }
 
 }
 //verify binary (must be int, must only contain 0s/1s, must only contain 8 characters)
-function verifyBinary(){
-
+function verifyBinary(input){
+    let number = input
+    const binTest = /((?:[10]{2}){8})/;
+    switch (number) {
+        case binTest:
+            return true;
+        default:
+            return false;
+    }
 }
+
+
 //convert denary into binary
 function Den2binary(input){
-    let number = parseInt(input);
+    let number = input
     let binaryResult =  []
     for (let i = 0; i < 9; i++) {
         binaryResult.push(binaryResult[i] = number % 2)
@@ -49,10 +73,11 @@ function Den2binary(input){
 function den2Hexadecimal(input){
     let binary = den2binary(input);
     let hexadecimal = bin2Hexadecimal(binary);
+
 }
 //convert binary into denary
 function Bin2denary(input){
-    let splitbinary = input.split("")
+    let splitbinary = input.split()
     let map = new Map();
 
 }
@@ -77,7 +102,7 @@ function Hex2binary(input){
     map.set("F", "1111");
     let pt1 = map.get(input.slice(0,1));
     let pt2 = map.get(input.slice(2,2));
-    return pt1.toString() + p2.toString();
+    return pt1.toString() + pt2.toString();
 }
 //add two denary numbers
 function add(input1, input2){
