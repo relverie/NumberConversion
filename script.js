@@ -17,11 +17,47 @@ else:
 return error
 */
 //get the input!!!!!
-function parseInt(str){
-    let num;
-    num = document.getElementById(str);
-    return num;
-}
+const form = document.querySelector('form');
+
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const check1 = document.getElementById("check1")
+    const check2 = document.getElementById("check2")
+
+    const input1 = document.getElementById("inputOne")
+    const input2 = document.getElementById("inputTwo")
+
+    function verify(input, input2, check1, check2) {
+        if (input2 == "") {
+            switch (check1) {
+                case (check1 == "binary"):
+                    break;
+                case (check1 == "denary"):
+                    break;
+                case (check1 == "hexadecimal"):
+                    break;
+
+                default:
+                    break;
+            }
+            switch (check2) {
+                case (check2 == "binary"):
+                    break;
+                case (check2 == "denary"):
+                    break;
+                case (check2 == "hexadecimal"):
+                    break;
+
+                default:
+                    break;
+            }
+        }
+        else {
+
+        }
+    }
+})
+
 //verify denary (must be int, must be in range 0-255)
 function verifyDenary(input){
     let number = input
