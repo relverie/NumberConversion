@@ -3,12 +3,7 @@
     <head id="header">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/styles.css">
-        <script src="binary.js"></script>
-        <script src="denary.js"></script>
-        <script src="hexadecimal.js"></script>
-        <script src="interract.js"></script>
-        <script src="verify.js"></script>
+        <link rel="stylesheet" href="styles.css">
         <title>Number Conversion Project</title>
     </head>
     <body>
@@ -34,9 +29,9 @@
                         <input id="checkHexadecimal1" type="radio" name="check1" value="hexadecimal">
                     </div>
                     <label for="inputTwo">Enter a <strong>second</strong> denary, binary or hexadecimal number: </label>
-                    <input type="text" id="inputTwo" style="resize: none;background-color:#bac2de;font-size: 20px; margin-top: 10px" required maxlength="8"><br>
+                    <input type="text" id="inputTwo" style="resize: none;background-color:#bac2de;font-size: 20px; margin-top: 10px" maxlength="8"><br>
                     <div>
-                        <label for="None">Binary: </label>
+                        <label for="None">None: </label>
                         <input id="None" type="radio" name="check2" value="none">
                         <label for="checkBinary2">Binary: </label>
                         <input id="checkBinary2" type="radio" name="check2" value="binary">
@@ -86,5 +81,6 @@
                 </div>
             </div>
     </main>
+    <script defer src="script.js"></script>
     </body>
 </html>
