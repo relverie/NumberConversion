@@ -4,7 +4,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/styles.css">
-        <script src="script.js"></script>
+        <script src="binary.js"></script>
+        <script src="denary.js"></script>
+        <script src="hexadecimal.js"></script>
+        <script src="interract.js"></script>
+        <script src="verify.js"></script>
         <title>Number Conversion Project</title>
     </head>
     <body>
@@ -19,7 +23,7 @@
                 <form>
                 <div id="input" style="order: 1;flex-grow: 1">
                     <h2>Inputs: </h2>
-                    <label for="inputDefault">Enter a denary, binary or hexadecimal number: </label>
+                    <label for="inputOne">Enter a denary, binary or hexadecimal number: </label>
                     <input type="text" id="inputOne" style="resize: none;background-color:#bac2de;font-size: 20px" required maxlength="8"><br>
                     <div style="margin-bottom: 60px">
                         <label for="checkBinary1">Binary: </label>
@@ -29,9 +33,11 @@
                         <label for="checkHexadecimal1">Hexadecimal: </label>
                         <input id="checkHexadecimal1" type="radio" name="check1" value="hexadecimal">
                     </div>
-                    <label for="secondNumber">Enter a <strong>second</strong> denary, binary or hexadecimal number: </label>
+                    <label for="inputTwo">Enter a <strong>second</strong> denary, binary or hexadecimal number: </label>
                     <input type="text" id="inputTwo" style="resize: none;background-color:#bac2de;font-size: 20px; margin-top: 10px" required maxlength="8"><br>
                     <div>
+                        <label for="None">Binary: </label>
+                        <input id="None" type="radio" name="check2" value="none">
                         <label for="checkBinary2">Binary: </label>
                         <input id="checkBinary2" type="radio" name="check2" value="binary">
                         <label for="checkDenary2">Denary: </label>
@@ -45,10 +51,6 @@
                 <div id="output" style="order: 2;flex-grow: 1">
                     <h2>Outputs: </h2><br>
                     <table>
-                        <tr>
-                            <td>Your first number is in the format of: </td>
-                            <td><span id="ResultIdentifier"></span></td>
-                        </tr>
                         <tr>
                             <td>Conversion Result to <strong>denary</strong>: </td>
                             <td><span id="ResultDen"></span></td>
@@ -73,7 +75,7 @@
                         </tr>
                         <tr>
                             <td>Addition result of the two entered numbers in <strong>hexadecimal</strong>: </td>
-                            <td><span id="HexAddition">1902380918232</span></td>
+                            <td><span id="HexAddition"></span></td>
                         </tr>
                     </table>
                 </div>
