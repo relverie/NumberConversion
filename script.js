@@ -18,19 +18,19 @@ form.addEventListener ('submit', function(event)
 function output(input1, check1, input2, check2) {
     switch (check1) {
         case "binary":
-            document.getElementById("ResultDen").textContent = bin2Denary(input1.value)
-            document.getElementById("ResultBin").textContent = input1.value
-            document.getElementById("ResultHex").textContent = bin2Hex(input1.value)
+            document.getElementById("ResultDen").textContent = bin2Denary(input1)
+            document.getElementById("ResultBin").textContent = input1
+            document.getElementById("ResultHex").textContent = bin2Hex(input1)
             break;
         case "denary":
-            document.getElementById("ResultDen").textContent = input1.value
-            document.getElementById("ResultBin").textContent = den2Binary(input1.value)
-            document.getElementById("ResultHex").textContent = den2Hex(input1.value)
+            document.getElementById("ResultDen").textContent = input1
+            document.getElementById("ResultBin").textContent = den2Binary(input1)
+            document.getElementById("ResultHex").textContent = den2Hex(input1)
             break;
         case "hexadecimal":
-            document.getElementById("ResultDen").textContent = hex2Denary(input1.value)
-            document.getElementById("ResultBin").textContent = hex2Binary(input1.value)
-            document.getElementById("ResultHex").textContent = input1.value
+            document.getElementById("ResultDen").textContent = hex2Denary(input1)
+            document.getElementById("ResultBin").textContent = hex2Binary(input1)
+            document.getElementById("ResultHex").textContent = input1
             break;
     }
 
@@ -115,17 +115,12 @@ function den2Hex(input) {
 }
 
 //convert binary into denary
-function bin2Denary(input){
-    let den = input.split("").reverse();
-    let cul = 0 //cumulative
-    let mul = 1;
-    while (den.length > 0) {
-        cul += parseInt(den[0]) * mul; // Multiply the current bit by its place value
-        mul *= 2; // Increase place value (powers of 2)
-        den = den.slice(1); // Remove the first processed bit using slice (instead of substring)
+function bin2Denary(input) {
+    let decimal = 0;
+    for (let i = 0; i < input.length; i++) {
+        decimal = decimal * 2 + (input[i] === '1' ? 1 : 0);
     }
-
-    return cul.toString();
+    return decimal;
 }
 
 //convert binary to hexadecimal
