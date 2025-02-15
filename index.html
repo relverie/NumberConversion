@@ -1,86 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head id="header">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles.css">
-        <title>Number Conversion Project</title>
-    </head>
-    <body>
-    <main>
-        <div style="height: 60px;border-bottom: 5px solid #737994">
-            <p>
-                Hello! This web app is a school project used to convert numbers,
-                as well as doing basic addition in different formats.
-            </p>
+<head id="header">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Number Conversion Project</title>
+</head>
+<body>
+<main>
+    <div style="height: 60px;border-bottom: 5px solid #737994">
+        <p>
+            Hello! This web app is a school project used to convert numbers,
+            as well as doing basic addition in different formats.
+        </p>
+    </div>
+    <div id="main" class="flex-container" style="border-bottom: 5px solid #737994">
+        <form>
+            <div id="input" style="order: 1;flex-grow: 1">
+                <h2>Inputs: </h2>
+                <label for="inputOne">Enter a denary, binary or hexadecimal number: </label>
+                <input type="text" id="inputOne" style="resize: none;background-color:#bac2de;font-size: 20px" required
+                       maxlength="8"><br>
+                <div style="margin-bottom: 60px">
+                    <label for="checkBinary1">Binary: </label>
+                    <input id="checkBinary1" type="radio" name="check1" value="binary" checked>
+                    <label for="checkDenary1">Denary: </label>
+                    <input id="checkDenary1" type="radio" name="check1" value="denary">
+                    <label for="checkHexadecimal1">Hexadecimal: </label>
+                    <input id="checkHexadecimal1" type="radio" name="check1" value="hexadecimal">
+                </div>
+                <label for="inputTwo">Enter a <strong>second</strong> denary, binary or hexadecimal number: </label>
+                <input type="text" id="inputTwo"
+                       style="resize: none;background-color:#bac2de;font-size: 20px; margin-top: 10px"
+                       maxlength="8"><br>
+                <div>
+                    <label for="None">None: </label>
+                    <input id="None" type="radio" name="check2" value="none" checked>
+                    <label for="checkBinary2">Binary: </label>
+                    <input id="checkBinary2" type="radio" name="check2" value="binary">
+                    <label for="checkDenary2">Denary: </label>
+                    <input id="checkDenary2" type="radio" name="check2" value="denary">
+                    <label for="checkHexadecimal2">Hexadecimal: </label>
+                    <input id="checkHexadecimal2" type="radio" name="check2" value="hexadecimal">
+                </div>
+                <input type="button" id="submit" style="background-color:#bac2de;font-size: 20px; margin-top: 40px"
+                       name="submit" value="Submit Number">
+            </div>
+        </form>
+        <div id="output" style="order: 2;flex-grow: 1">
+            <h2>Outputs: </h2><br>
+            <table>
+                <tr>
+                    <td>Conversion Result to <strong>denary</strong>:</td>
+                    <td><span id="ResultDen"></span></td>
+                </tr>
+                <tr>
+                    <td>Conversion Result to <strong>binary</strong>:</td>
+                    <td><span id="ResultBin"></span></td>
+                </tr>
+                <tr>
+                    <td>Conversion Result to <strong>hexadecimal</strong>:</td>
+                    <td><span id="ResultHex"></span></td>
+                </tr>
+            </table>
+            <table style="margin-top: 40px">
+                <tr>
+                    <td>Addition result of the two entered numbers in <strong>denary</strong>:</td>
+                    <td><span id="DenAddition"></span></td>
+                </tr>
+                <tr>
+                    <td>Addition result of the two entered numbers in <strong>binary</strong>:</td>
+                    <td><span id="BinAddition"></span></td>
+                </tr>
+                <tr>
+                    <td>Addition result of the two entered numbers in <strong>hexadecimal</strong>:</td>
+                    <td><span id="HexAddition"></span></td>
+                </tr>
+            </table>
         </div>
-        <div id="main" class="flex-container" style ="border-bottom: 5px solid #737994">
-                <form>
-                <div id="input" style="order: 1;flex-grow: 1">
-                    <h2>Inputs: </h2>
-                    <label for="inputOne">Enter a denary, binary or hexadecimal number: </label>
-                    <input type="text" id="inputOne" style="resize: none;background-color:#bac2de;font-size: 20px" required maxlength="8"><br>
-                    <div style="margin-bottom: 60px">
-                        <label for="checkBinary1">Binary: </label>
-                        <input id="checkBinary1" type="radio" name="check1" value="binary" checked>
-                        <label for="checkDenary1">Denary: </label>
-                        <input id="checkDenary1" type="radio" name="check1" value="denary">
-                        <label for="checkHexadecimal1">Hexadecimal: </label>
-                        <input id="checkHexadecimal1" type="radio" name="check1" value="hexadecimal">
-                    </div>
-                    <label for="inputTwo">Enter a <strong>second</strong> denary, binary or hexadecimal number: </label>
-                    <input type="text" id="inputTwo" style="resize: none;background-color:#bac2de;font-size: 20px; margin-top: 10px" maxlength="8"><br>
-                    <div>
-                        <label for="None">None: </label>
-                        <input id="None" type="radio" name="check2" value="none" checked>
-                        <label for="checkBinary2">Binary: </label>
-                        <input id="checkBinary2" type="radio" name="check2" value="binary">
-                        <label for="checkDenary2">Denary: </label>
-                        <input id="checkDenary2" type="radio" name="check2" value="denary">
-                        <label for="checkHexadecimal2">Hexadecimal: </label>
-                        <input id="checkHexadecimal2" type="radio" name="check2" value="hexadecimal">
-                    </div>
-                    <input type="button" id="submit" style="background-color:#bac2de;font-size: 20px; margin-top: 40px" name="submit" value="Submit Number">
-                </div>
-                </form>
-                <div id="output" style="order: 2;flex-grow: 1">
-                    <h2>Outputs: </h2><br>
-                    <table>
-                        <tr>
-                            <td>Conversion Result to <strong>denary</strong>: </td>
-                            <td><span id="ResultDen"></span></td>
-                        </tr>
-                        <tr>
-                            <td>Conversion Result to <strong>binary</strong>: </td>
-                            <td><span id="ResultBin"></span></td>
-                        </tr>
-                        <tr>
-                            <td>Conversion Result to <strong>hexadecimal</strong>: </td>
-                            <td><span id="ResultHex"></span></td>
-                        </tr>
-                        </table>
-                    <table style="margin-top: 40px">
-                        <tr>
-                            <td>Addition result of the two entered numbers in <strong>denary</strong>: </td>
-                            <td><span id="DenAddition"></span></td>
-                        </tr>
-                        <tr>
-                            <td>Addition result of the two entered numbers in <strong>binary</strong>: </td>
-                            <td><span id="BinAddition"></span></td>
-                        </tr>
-                        <tr>
-                            <td>Addition result of the two entered numbers in <strong>hexadecimal</strong>: </td>
-                            <td><span id="HexAddition"></span></td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-            <div id="foot">
-                <div id="footer">
-                    <footer><small>made with <a href="https://catppuccin.com/" style="color: #babbf1">Catppuchin</a> by <a href="https://github.com/relverie" style="color: #babbf1">reverie</a> &lt;3 </small></footer>
-                </div>
-            </div>
-    </main>
-    <script defer src="script.js"></script>
-    </body>
+    </div>
+    <div id="foot">
+        <div id="footer">
+            <footer><small>made with <a href="https://catppuccin.com/" style="color: #babbf1">Catppuchin</a> by <a
+                    href="https://github.com/relverie" style="color: #babbf1">reverie</a> &lt;3 </small></footer>
+        </div>
+    </div>
+</main>
+<script defer src="script.js"></script>
+</body>
 </html>
