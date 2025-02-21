@@ -111,9 +111,14 @@ function hex2Denary(input) {
 }
 
 // convert denary into binary
-function den2Binary(input) {
-    let number = parseInt(input, 10);
-    return number.toString(2).padStart(8, '0');
+function den2Binary(input){
+    let number = input
+    let binaryResult =  []
+    for (let i = 0; i < 9; i++) {
+        binaryResult.push(binaryResult[i] = number % 2)
+        number = number / 2
+    }
+    return (binaryResult.join()).toString();
 }
 
 // convert denary into hexadecimal
@@ -122,18 +127,42 @@ function den2Hex(input) {
 }
 
 // convert binary into denary
-function bin2Denary(input) {
-    let decimal = 0;
-    for (let i = 0; i < input.length; i++) {
-        decimal = decimal * 2 + (input[i] === '1' ? 1 : 0);
+//convert binary into denary
+function bin2Denary(input){
+    let den = input.split("").reverse();
+    let cul = 0 //cumulative
+    let mul = 1;
+    while (den.length > 0) {
+        cul += parseInt(den[0]) * mul;
+        mul *= 2;
+        den = den.slice(1); 
     }
-    return decimal.toString();
+    return cul.toString();
+    return decimal;
 }
 
 // convert binary to hexadecimal
-function bin2Hex(input) {
-    let hex = parseInt(input, 2).toString(16).toUpperCase();
-    return hex.padStart(2, '0'); // Ensures two-digit output (00-FF)
+function bin2Hex(input){
+    let bind = new Map(); //silly
+    bind.set("0", "0000");
+    bind.set("1", "0001");
+    bind.set("2", "0010");
+    bind.set("3", "0011");
+    bind.set("4", "0100");
+    bind.set("5", "0101");
+    bind.set("6", "0110");
+    bind.set("7", "0111");
+    bind.set("8", "1000");
+    bind.set("9", "1001");
+    bind.set("A", "1010");
+    bind.set("B", "1011");
+    bind.set("C", "1100");
+    bind.set("D", "1101");
+    bind.set("E", "1110");
+    bind.set("F", "1111");
+    let pt1 = bind.get(input.slice(0,3));
+    let pt2 = bind.get(input.slice(4,8));
+    return pt1.toString() + pt2.toString();
 }
 
 //====================
