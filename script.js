@@ -71,7 +71,7 @@ function output(input1, check1, input2, check2) {
             num2 = 0;
             break;
     }
-    let num3 = num1 + num2;
+    let num3 = parseInt(num1) + parseInt(num2);
     document.getElementById("DenAddition").innerHTML = num3;
     document.getElementById("BinAddition").innerHTML = den2Binary(num3);
     document.getElementById("HexAddition").innerHTML = den2Hex(num3);
