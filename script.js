@@ -1,3 +1,5 @@
+console.log("Script loaded and executing");
+
 const form = document.querySelector('form');
 form.addEventListener('submit', function(event) {
     event.preventDefault();
