@@ -1,27 +1,29 @@
+<!-- Boilerplate! -->
 <!DOCTYPE html>
 <html lang="en">
 <head id="header">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Number Conversion Project</title>
+    <meta charset="UTF-8"> <!--character set-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--sets the initial scale of the web app-->
+    <link rel="stylesheet" href="styles.css"> <!--links css-->
+    <title>Number Conversion Project</title> <!--title, shown in the top of the webpage-->
 </head>
 <body>
 <main>
-    <div style="height: 60px;border-bottom: 5px solid #737994">
+    <div style="height: 60px;border-bottom: 5px solid #737994"> <!--the line on the bottom of the introductory paragraph-->
         <p>
             Hello! This web app is a school project used to convert numbers,
             as well as doing basic addition in different formats.
         </p>
     </div>
-    <div id="main" class="flex-container" style="border-bottom: 5px solid #737994">
+    <div id="main" class="flex-container" style="border-bottom: 5px solid #737994"> <!--main flex container containing the input and outputs-->
         <form>
-            <div id="input" style="order: 1;flex-grow: 1">
+            <div id="input" style="order: 1;flex-grow: 1"> <!--the first flexbox containing inputs-->
                 <h2>Inputs: </h2>
                 <label for="inputOne">Enter a denary, binary or hexadecimal number: </label>
+                <!--primary inputs-->
                 <input type="text" id="inputOne" style="resize: none;background-color:#bac2de;font-size: 20px" required
                        maxlength="8"><br>
-                <div style="margin-bottom: 60px">
+                <div style="margin-bottom: 60px"> <!--first verify radio buttons-->
                     <label for="checkBinary1">Binary: </label>
                     <input id="checkBinary1" type="radio" name="check1" value="binary" checked>
                     <label for="checkDenary1">Denary: </label>
@@ -30,10 +32,11 @@
                     <input id="checkHexadecimal1" type="radio" name="check1" value="hexadecimal">
                 </div>
                 <label for="inputTwo">Enter a <strong>second</strong> denary, binary or hexadecimal number: </label>
+                <!--secondary inputs-->
                 <input type="text" id="inputTwo"
                        style="resize: none;background-color:#bac2de;font-size: 20px; margin-top: 10px"
                        maxlength="8"><br>
-                <div>
+                <div> <!--the second verify radio buttons-->
                     <label for="None">None: </label>
                     <input id="None" type="radio" name="check2" value="none" checked>
                     <label for="checkBinary2">Binary: </label>
@@ -43,13 +46,14 @@
                     <label for="checkHexadecimal2">Hexadecimal: </label>
                     <input id="checkHexadecimal2" type="radio" name="check2" value="hexadecimal">
                 </div>
+                <!--the submit button!-->
                 <input type="submit" id="submit" style="background-color:#bac2de;font-size: 20px; margin-top: 40px"
                        name="submit" value="Submit Number">
             </div>
         </form>
-        <div id="output" style="order: 2;flex-grow: 1">
+        <div id="output" style="order: 2;flex-grow: 1"> <!--the second flexbox containing outputs-->
             <h2>Outputs: </h2><br>
-            <table>
+            <table> <!--First Table containing the conversion results!-->
                 <tr>
                     <td>Conversion Result to <strong>denary</strong>:</td>
                     <td><span id="ResultDen"></span></td>
@@ -63,7 +67,7 @@
                     <td><span id="ResultHex"></span></td>
                 </tr>
             </table>
-            <table style="margin-top: 40px">
+            <table style="margin-top: 40px"> <!--Second table containing the addition results!-->
                 <tr>
                     <td>Addition result of the two entered numbers in <strong>denary</strong>:</td>
                     <td><span id="DenAddition"></span></td>
@@ -80,12 +84,12 @@
         </div>
     </div>
     <div id="foot">
-        <div id="footer">
+        <div id="footer"> <!--footer of the page!-->
             <footer><small>made with <a href="https://catppuccin.com/" style="color: #babbf1">Catppuchin</a> by <a
                     href="https://github.com/relverie" style="color: #babbf1">reverie</a> &lt;3 </small></footer>
         </div>
     </div>
 </main>
-<script defer src="script.js"></script>
+<script defer src="script.js"></script> <!--links the javascript to the main page-->
 </body>
 </html>

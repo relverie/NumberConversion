@@ -1,28 +1,28 @@
-console.log("Script loaded and executing");
+console.log("js started!");
 
-const form = document.querySelector('form');
+const form = document.querySelector('form'); //creates form
 form.addEventListener('submit', function(event) {
-    event.preventDefault();
-    let check1 = document.querySelector('input[name="check1"]:checked')?.value;
+    event.preventDefault(); //prevents the page from reloading
+    let check1 = document.querySelector('input[name="check1"]:checked')?.value; //gets the data from the radio buttons
     let check2 = document.querySelector('input[name="check2"]:checked')?.value;
-    let input1 = (document.getElementById("inputOne")).value;
+    let input1 = (document.getElementById("inputOne")).value; //gets the data from the two inputs
     let input2 = (document.getElementById("inputTwo")).value;
 
-    console.log("Input1:", input1, "Check1:", check1);
+    console.log("Input1:", input1, "Check1:", check1); //logs in console the inputs and checks
     console.log("Input2:", input2, "Check2:", check2);
 
-    let verify1 = verifyType(check1, input1);
+    let verify1 = verifyType(check1, input1); //verifies the type of the inputs to the checks
     let verify2 = verifyType(check2, input2);
 
-    console.log("Verify1:", verify1, "Verify2:", verify2);
+    console.log("Verify1:", verify1, "Verify2:", verify2); //logs in console the result of the checks
 
-    if (verify1 === true && verify2 === true) {
+    if (verify1 === true && verify2 === true) { //if everything is valid, then the data will be output
         output(input1, check1, input2, check2);
     }
 });
 
-function output(input1, check1, input2, check2) {
-    switch (check1) {
+function output(input1, check1, input2, check2) { //outputs data through the table
+    switch (check1) { //according to the type of the inputs, the different values will be converted and output
         case "binary":
             document.getElementById("ResultDen").textContent = bin2Denary(input1);
             document.getElementById("ResultBin").textContent = input1;
@@ -40,7 +40,7 @@ function output(input1, check1, input2, check2) {
             break;
     }
 
-    let num1; // converts input1 into denary
+    let num1; // converts input1 into denary according to type
     switch (check1) {
         case "binary":
             num1 = bin2Denary(input1);
@@ -53,7 +53,7 @@ function output(input1, check1, input2, check2) {
             break;
     }
 
-    let num2; // converts input2 into denary
+    let num2; // converts input2 into denary according to type
     switch (check2) {
         case "binary":
             num2 = bin2Denary(input2);
@@ -71,7 +71,7 @@ function output(input1, check1, input2, check2) {
             num2 = 0;
             break;
     }
-    let num3 = parseInt(num1) + parseInt(num2);
+    let num3 = parseInt(num1) + parseInt(num2); //adds num1 and num2 together and outputting it as different types
     document.getElementById("DenAddition").innerHTML = num3;
     document.getElementById("BinAddition").innerHTML = den2Binary(num3);
     document.getElementById("HexAddition").innerHTML = den2Hex(num3);
@@ -83,7 +83,7 @@ function output(input1, check1, input2, check2) {
 
 // convert hexadecimal into binary
 function hex2Binary(input) {
-    let map = new Map(); // silly
+    let map = new Map(); // maps the hexadecimal to binary.
     map.set("0", "0000");
     map.set("1", "0001");
     map.set("2", "0010");
@@ -106,7 +106,7 @@ function hex2Binary(input) {
 }
 
 // Convert hexadecimal to denary
-function hex2Denary(input) {
+function hex2Denary(input) { //reuses previous code
     return (bin2Denary(hex2Binary(input))).toString();
 }
 
@@ -115,30 +115,29 @@ function den2Binary(input){
     let number = input
     let binaryResult =  []
     for (let i = 0; i < 9; i++) {
-        binaryResult.push(binaryResult[i] = number % 2)
+        binaryResult.push(binaryResult[i] = number % 2) //.push() adds the new item of the array to the right of the array.
         number = number / 2
     }
     return (binaryResult.join()).toString();
 }
 
 // convert denary into hexadecimal
-function den2Hex(input) {
+function den2Hex(input) { //reuses previous code.
     return (bin2Hex(den2Binary(input))).toString();
 }
 
 // convert binary into denary
 //convert binary into denary
 function bin2Denary(input){
-    let den = input.split("").reverse();
+    let den = input.reverse()
     let cul = 0 //cumulative
-    let mul = 1;
-    while (den.length > 0) {
-        cul += parseInt(den[0]) * mul;
-        mul *= 2;
-        den = den.slice(1); 
+    let mul = 128 //multiplier
+    while (den > 0) {
+        cul = cul + (den[1] * mul)
+        mul = mul / 2
+        den = den.substring(1)
     }
-    return cul.toString();
-    return decimal;
+    return cul.toString()
 }
 
 // convert binary to hexadecimal
@@ -171,7 +170,7 @@ function bin2Hex(input){
 
 // verify denary (must be int, must be in range 0-255)
 function verifyDenary(input) {
-    if (!/^\d+$/.test(input) || input < 0 || input > 255) {
+    if (!/^\d+$/.test(input) || input < 0 || input > 255) { //verifies step by step (|| is pipeline)
         alert("ERROR: Denary inputs must be numbers between 0 and 255.");
         return false;
     }

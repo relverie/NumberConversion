@@ -1,27 +1,31 @@
+/* Note: the CSS is a bit messy considering that I put some of the CSS code in the html already */
+/*CSS that applies to the body of the html page*/
 body {
     font-family: Verdana, sans-serif;
     color: #cad3f5;
     background-color: #181926;
 }
-
+/*CSS that applies to the whole of the page*/
 main {
     width: 80%;
     background-color: #24273a;
     margin: auto;
     border: 10px solid #24273a;
 }
-
+/*Header CSS*/
 head {
     border-radius: 25px;
     text-align: center;
     padding: 20px 20px 20px 80px;
     margin: 5px;
 }
+/*Inputs and Outputs CSS*/
 output, input {
     border-radius: 5px;
     margin: 5px;
     padding: 10px 20px;
 }
+/*Table CSS*/
 table, th, td {
     border: 3px solid #24273a;
     border-collapse: collapse;
@@ -29,6 +33,18 @@ table, th, td {
 th, td {
     background-color: #51576d;
 }
+td span {
+    flex-grow: 1;
+    min-width: 50px; /* Ensure text has space */
+    display: inline-block; /* Ensures span respects width */
+}
+
+#output {
+    display: flex;
+    flex-direction: column; /* Stacks items inside */
+    align-items: flex-start; /* Ensures text aligns properly */
+}
+/*Footer CSS*/
 footer {
     border-radius: 5px;
     text-align: center;
@@ -39,7 +55,7 @@ footer {
     padding-bottom: 10px;
     margin: 10px;
 }
-
+/* Contains the flexbox! */
 .wrapper{
 }
 /*flexbox*/
@@ -48,6 +64,7 @@ footer {
     display: flex;
     flex-direction: row;
 }
+/* Changes the alignment of the flexbox on the page in respect to the width of the screen (mobile support!) */
 @media (max-width: 768px) {
     .flex-container {
         flex-direction: column;
@@ -63,17 +80,5 @@ footer {
     main {
         width: 100%;
     }
-}
-
-td span {
-    flex-grow: 1;
-    min-width: 50px; /* Ensure text has space */
-    display: inline-block; /* Ensures span respects width */
-}
-
-#output {
-    display: flex;
-    flex-direction: column; /* Stacks items inside */
-    align-items: flex-start; /* Ensures text aligns properly */
 }
 
