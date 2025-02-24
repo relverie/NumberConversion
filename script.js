@@ -72,9 +72,9 @@ function output(input1, check1, input2, check2) { //outputs data through the tab
             break;
     }
     let num3 = parseInt(num1) + parseInt(num2); //adds num1 and num2 together and outputting it as different types
-    document.getElementById("DenAddition").innerHTML = num3;
-    document.getElementById("BinAddition").innerHTML = den2Binary(num3);
-    document.getElementById("HexAddition").innerHTML = den2Hex(num3);
+    document.getElementById("DenAddition").innerHTML = num3.toString();
+    document.getElementById("BinAddition").innerHTML = den2Binary(num3).toString();
+    document.getElementById("HexAddition").innerHTML = den2Hex(num3).toString();
 }
 
 //====================
