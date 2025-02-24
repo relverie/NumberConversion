@@ -72,9 +72,9 @@ function output(input1, check1, input2, check2) { //outputs data through the tab
             break;
     }
     let num3 = parseInt(num1) + parseInt(num2); //adds num1 and num2 together and outputting it as different types
-    document.getElementById("DenAddition").innerHTML = num3;
-    document.getElementById("BinAddition").innerHTML = den2Binary(num3);
-    document.getElementById("HexAddition").innerHTML = den2Hex(num3);
+    document.getElementById("DenAddition").innerHTML = num3.toString();
+    document.getElementById("BinAddition").innerHTML = den2Binary(num3).toString();
+    document.getElementById("HexAddition").innerHTML = den2Hex(num3).toString();
 }
 
 //====================
@@ -111,16 +111,10 @@ function hex2Denary(input) { //reuses previous code
 }
 
 // convert denary into binary
-function den2Binary(input){
-    let number = input
-    let binaryResult =  []
-    for (let i = 0; i < 9; i++) {
-        binaryResult.push(binaryResult[i] = number % 2) //.push() adds the new item of the array to the right of the array.
-        number = number / 2
-    }
-    return (binaryResult.join()).toString();
+function den2Binary(input) {
+    let number = parseInt(input, 10);
+    return number.toString(2).padStart(8, '0');
 }
-
 // convert denary into hexadecimal
 function den2Hex(input) { //reuses previous code.
     return (bin2Hex(den2Binary(input))).toString();
