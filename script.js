@@ -183,7 +183,7 @@ function verifyHexadecimal(input) {
 
 // verify binary (must be int, must only contain 0s/1s, must only contain 8 characters)
 function verifyBinary(input) {
-    const binTest = /^[01]{8}$/;
+    const binTest = /^[01]{1,8}$/;
     if (!binTest.test(input)) {
         alert("ERROR: Binary inputs must be Binary and in range 00000000-11111111 (Den: 0-255)");
         return false;

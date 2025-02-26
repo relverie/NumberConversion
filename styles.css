@@ -82,3 +82,22 @@ footer {
     }
 }
 
+<<<<<<< Updated upstream
+=======
+td span {
+    flex-grow: 1;
+    min-width: 50px; /* Ensure text has space */
+    display: inline-block; /* Ensures span respects width */
+}
+
+#output {
+    display: flex;
+    flex-direction: column; /* Stacks items inside */
+    align-items: flex-start; /* Ensures text aligns properly */
+}
+
+#checks {
+    border-right: 5px;
+}
+
+>>>>>>> Stashed changes
